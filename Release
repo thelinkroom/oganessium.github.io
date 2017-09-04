@@ -1,0 +1,9 @@
+Origin: ogane's repo
+Label: ogane's repo
+Suite: stable
+Version: 0.1
+Codename: oganessium
+Architectures: iphoneos-arm
+Components: main
+Description: ogane's awesome cydia repo
+MD5Sum:
