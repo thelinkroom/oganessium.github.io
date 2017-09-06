@@ -5,11 +5,11 @@ Maintainer: Oganessium <oganesson1@icloud.com>
 Depends: com.anemonetheming.anemone
 Filename: debs/appballs.deb
 Size: 231006
-MD5Sum: BA028B072307742E48288A7EAAFD3257
-SHA1: 2DA573B90EC240826AB272753E776D616DFE8EBE
-SHA256: AE5F47114FD7D12BC5C5F83F5AB49CFF96DF306E068C2D1AE510265BD830F954
+MD5Sum: ba028b072307742e48288a7eaafd3257
+SHA1: 2da573b90ec240826ab272753e776d616dfe8ebe
+SHA256: ae5f47114fd7d12bc5c5f83f5ab49cff96df306e068c2d1ae510265bd830f954
 Section: Themes
 Description: Fun countryball-esque app icons. Now supports iPhone stock apps
 Author: Oganessium <oganesson1@icloud.com>
-Depiction: http://oganessium.github.io/Depic/com.oganessiumspkgid.appballs/index.html
+Depiction: https://oganessium.github.io/depic/com.oganessiumspkgid.appballs/index.html
 Name: Appballs
