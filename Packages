@@ -3,7 +3,7 @@ Version: 0.3
 Architecture: iphoneos-arm
 Maintainer: Oganessium <oganesson1@icloud.com>
 Depends: com.anemonetheming.anemone
-Filename: ./debs/Appballs.deb
+Filename: ./debs/appballs.deb
 Size: 276948
 MD5sum: 5088980b91be5d398881a31b612edfb0
 SHA1: 1dfe710f3934a9df08a76975ca17dce2963ad57f
