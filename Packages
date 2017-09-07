@@ -1,15 +1,15 @@
 Package: com.oganessiumspkgid.appballs
-Version: 0.2.4
+Version: 0.3
 Architecture: iphoneos-arm
 Maintainer: Oganessium <oganesson1@icloud.com>
 Depends: com.anemonetheming.anemone
-Filename: ./debs/appballs.deb
-Size: 231006
-MD5sum: ba028b072307742e48288a7eaafd3257
-SHA1: 2da573b90ec240826ab272753e776d616dfe8ebe
-SHA256: ae5f47114fd7d12bc5c5f83f5ab49cff96df306e068c2d1ae510265bd830f954
+Filename: ./debs/Appballs.deb
+Size: 276948
+MD5sum: 5088980b91be5d398881a31b612edfb0
+SHA1: 1dfe710f3934a9df08a76975ca17dce2963ad57f
+SHA256: 8e70d96814eb9089c503540d8b1c51e80917b4e158906723fc0706be0ff98590
 Section: Themes
-Description: Fun countryball-esque app icons. Now supports iPhone stock apps
+Description: Fun countryball-esque app icons. Now supports 100 ICONS!
 Author: Oganessium <oganesson1@icloud.com>
 Name: Appballs
 
