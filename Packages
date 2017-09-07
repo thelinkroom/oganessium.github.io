@@ -4,10 +4,10 @@ Architecture: iphoneos-arm
 Maintainer: Oganessium <oganesson1@icloud.com>
 Depends: com.anemonetheming.anemone
 Filename: ./debs/appballs.deb
-Size: 276948
-MD5sum: 7eccc3dd2f5afc43794662343258adb3
-SHA1: f6b0f8b0d34058ce314a8f36d29c7abfcbd2f832
-SHA256: bb40a678295a2ab1d425afb59f83b116ae55d2529f14b9c633618cfa67fbfd59
+Size: 285546
+MD5sum: 04647069829c64ba5a7f0c2cb14e575e
+SHA1: 0ff9f9855e0718fcf8563754b56aeecde28a88de
+SHA256: 2522f2536f30a8547272e693918d884d7feb85a947e395255b5927bebdae9da9
 Section: Themes
 Description: Fun countryball-esque app icons. Now supports 100 ICONS!
 Author: Oganessium <oganesson1@icloud.com>
