@@ -31,13 +31,13 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Webclip icon for your website (happy_dolphin). Version 1.1 com.cttapp.84029805e4168adf983e5bff5483e038</string>
+	<string>happy_dolphin v2</string>
 	<key>PayloadDisplayName</key>
-	<string>Website Profile for happy_dolphin</string>
+	<string>happy_dolphin</string>
 	<key>PayloadIdentifier</key>
-	<string>com.cttapp.84029805e4168adf983e5bff5483e038</string>
+	<string>oganessiumshappydolphin</string>
 	<key>PayloadOrganization</key>
-	<string>Christian Turkoanje</string>
+	<string>Oganessium</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadType</key>
