@@ -19,10 +19,10 @@ Architecture: iphoneos-arm
 Maintainer: octoglomm <oganesson1@icloud.com>
 Depends: com.anemonetheming.anemone
 Filename: ./debs/brenskin.deb
-Size: 83020
-MD5sum: bcaa9be612d2b15875337f3e1165234d
-SHA1: 6eced1c5968a25a7af6e6783b5a2aa6cc8ee36bf
-SHA256: af745bd5b1aa0cd6a9178e7ac2397790933a891e5ab50ef2ba4fc64e26acc04e
+Size: 82812
+MD5sum: bc5a63a81e266d0adb2414ba45b8331d
+SHA1: a2ebc043c3f47ef10130c1dced2d565e4a6b5a1f
+SHA256: 8ad993b83b3d633c0a9e6a80048f82383dff13546aa4e96d6a8cf75ea0ed3d08
 Section: Themes
 Description: The only iPhone theme.
 Author: octoglomm <oganesson1@icloud.com>
