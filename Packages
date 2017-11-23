@@ -13,3 +13,18 @@ Description: Fun countryball-esque app icons. Now supports 100 ICONS!
 Author: octoglomm <oganesson1@icloud.com>
 Name: Appballs
 
+Package: com.oganessiumspkgid.brenskin
+Version: 0.69
+Architecture: iphoneos-arm
+Maintainer: octoglomm <oganesson1@icloud.com>
+Depends: com.anemonetheming.anemone
+Filename: ./debs/brenskin.deb
+Size: 83020
+MD5sum: bcaa9be612d2b15875337f3e1165234d
+SHA1: 6eced1c5968a25a7af6e6783b5a2aa6cc8ee36bf
+SHA256: af745bd5b1aa0cd6a9178e7ac2397790933a891e5ab50ef2ba4fc64e26acc04e
+Section: Themes
+Description: The only iPhone theme.
+Author: octoglomm <oganesson1@icloud.com>
+Name: brenskin
+
