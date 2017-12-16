@@ -1,0 +1,704 @@
+<HTA:APPLICATION
+id="clickers" applicationname="clickevol" border="dialog" maximizebutton="no" minimizebutton="yes"
+singleinstance="yes"
+scroll="no"
+caption="yes"
+innerborder="yes"
+showintaskbar="yes"
+icon="data/clickevol.ico"
+sysmenu="yes"
+selection="no"
+windowstate="normal" />
+
+<html>
+
+<head>
+	<title>Clicker Evolution</title>
+<script src="data/savedata/save.dat"></script>
+
+<script type="text/javascript">
+	
+var evolcreate = "";
+var redcount = 0;
+var orangecount = 0;
+var yellowcount = 0;
+var greencount = 0;
+var bluecount = 0;
+var purplecount = 0;
+var magentacount = 0;
+var pinkcount = 0;
+var lgraycount = 0;
+var graycount = 0;
+var navycount = 0;
+var turqcount = 0;
+var skincount = 0;
+var mancount = 0;
+var remove1 = "";
+var remove2 = "";
+var score = 0;
+var money = 0;
+var username = "";
+var saveload = "";
+var fullcount = 0;
+
+function evolveCreator() { //Creates Reds
+fullcount=redcount+orangecount+yellowcount+greencount+bluecount+purplecount+magentacount; //tallies full count
+if(fullcount!=80) { //checks if board is full
+redcount= +redcount + 1; //adds 1 red
+score = +score + 1; //adds 1 score
+money = +money + ((score+1)*.5); //adds money
+document.getElementById("money").innerHTML = money;
+document.getElementById("score").innerHTML = score;
+//these two set the visuals for money/scores
+
+//creates a red block
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/1.png';
+evolcreate.alt = 'red';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'red" + redcount + "'");
+
+document.body.appendChild(evolcreate);
+} else {
+alert('The board is full!');
+}
+
+}
+
+function redMerge() { //Merges Red to Orange
+if(redcount>=2) {
+if(money>=4) {
+money = +money - 4;
+document.getElementById("money").innerHTML = money;
+var redcountminus = +redcount - 1;
+eval("remove1=document.getElementById('red" + redcount + "')");
+eval("remove2=document.getElementById('red" + redcountminus + "')");
+redcount = +redcount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+orangecount = +orangecount + 1;
+score = +score + 2;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/2.png';
+evolcreate.alt = 'orange';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'orange" + orangecount + "'");
+ 
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function orangeMerge() {
+if(orangecount>=2) {
+if(money>=16) {
+money = +money - 16;
+document.getElementById("money").innerHTML = money;
+var orangecountminus = +orangecount - 1;
+eval("remove1=document.getElementById('orange" + orangecount + "')");
+eval("remove2=document.getElementById('orange" + orangecountminus + "')");
+orangecount = +orangecount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+yellowcount = +yellowcount + 1;
+score = +score + 4;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/3.png';
+evolcreate.alt = 'yellow';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'yellow" + yellowcount + "'");
+  
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function yellowMerge() {
+if(yellowcount>=2) {
+if(money>=64) {
+money = +money - 64;
+document.getElementById("money").innerHTML = money;
+var yellowcountminus = +yellowcount - 1;
+eval("remove1=document.getElementById('yellow" + yellowcount + "')");
+eval("remove2=document.getElementById('yellow" + yellowcountminus + "')");
+yellowcount = +yellowcount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+greencount = +greencount + 1;
+score = +score + 8;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/4.png';
+evolcreate.alt = 'green';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'green" + greencount + "'");
+ 
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function greenMerge() {
+if(greencount>=2) {
+if(money>=256) {
+money = +money - 256;
+document.getElementById("money").innerHTML = money;
+var greencountminus = +greencount - 1;
+eval("remove1=document.getElementById('green" + greencount + "')");
+eval("remove2=document.getElementById('green" + greencountminus + "')");
+greencount = +greencount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+bluecount = +bluecount + 1;
+score = +score + 16;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/5.png';
+evolcreate.alt = 'blue';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'blue" + bluecount + "'");
+ 
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function blueMerge() {
+if(bluecount>=2) {
+if(money>=1024) {
+money = +money - 1024;
+document.getElementById("money").innerHTML = money;
+var bluecountminus = +bluecount - 1;
+eval("remove1=document.getElementById('blue" + bluecount + "')");
+eval("remove2=document.getElementById('blue" + bluecountminus + "')");
+bluecount = +bluecount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+purplecount = +purplecount + 1;
+score = +score + 32;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/6.png';
+evolcreate.alt = 'purple';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'purple" + purplecount + "'");
+ 
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function purpleMerge() {
+if(purplecount>=2) {
+if(money>=4096) {
+money = +money - 4096;
+document.getElementById("money").innerHTML = money;
+var purplecountminus = +purplecount - 1;
+eval("remove1=document.getElementById('purple" + purplecount + "')");
+eval("remove2=document.getElementById('purple" + purplecountminus + "')");
+purplecount = +purplecount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+magentacount = +magentacount + 1;
+score = +score + 64;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/7.png';
+evolcreate.alt = 'magenta';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'magenta" + magentacount + "'");
+ 
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function magentaMerge() {
+if(magentacount>=2) {
+if(money>=16384) {
+money = +money - 16384;
+document.getElementById("money").innerHTML = money;
+var magentacountminus = +magentacount - 1;
+eval("remove1=document.getElementById('magenta" + magentacount + "')");
+eval("remove2=document.getElementById('magenta" + magentacountminus + "')");
+magentacount = +magentacount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+pinkcount = +pinkcount + 1;
+score = +score + 64;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/8.png';
+evolcreate.alt = 'pink';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'pink" + pinkcount + "'");
+ 
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function pinkMerge() {
+if(pinkcount>=2) {
+if(money>=65536) {
+money = +money - 65536;
+document.getElementById("money").innerHTML = money;
+var pinkcountminus = +pinkcount - 1;
+eval("remove1=document.getElementById('pink" + pinkcount + "')");
+eval("remove2=document.getElementById('pink" + pinkcountminus + "')");
+pinkcount = +pinkcount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+lgraycount = +lgraycount + 1;
+score = +score + 64;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/9.png';
+evolcreate.alt = 'lgray';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'lgray" + lgraycount + "'");
+ 
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function lgrayMerge() {
+if(lgraycount>=2) {
+if(money>=262144) {
+money = +money - 262144;
+document.getElementById("money").innerHTML = money;
+var lgraycountminus = +lgraycount - 1;
+eval("remove1=document.getElementById('lgray" + lgraycount + "')");
+eval("remove2=document.getElementById('lgray" + lgraycountminus + "')");
+lgraycount = +lgraycount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+graycount = +graycount + 1;
+score = +score + 64;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/10.png';
+evolcreate.alt = 'gray';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'gray" + graycount + "'");
+ 
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function grayMerge() {
+if(graycount>=2) {
+if(money>=1048576) {
+money = +money - 1048576;
+document.getElementById("money").innerHTML = money;
+var graycountminus = +graycount - 1;
+eval("remove1=document.getElementById('gray" + graycount + "')");
+eval("remove2=document.getElementById('gray" + graycountminus + "')");
+graycount = +graycount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+navycount = +navycount + 1;
+score = +score + 64;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/11.png';
+evolcreate.alt = 'navy';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'navy" + navycount + "'");
+ 
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function navyMerge() {
+if(navycount>=2) {
+if(money>=4194304) {
+money = +money - 4194304;
+document.getElementById("money").innerHTML = money;
+var navycountminus = +navycount - 1;
+eval("remove1=document.getElementById('navy" + navycount + "')");
+eval("remove2=document.getElementById('navy" + navycountminus + "')");
+navycount = +navycount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+turqcount = +turqcount + 1;
+score = +score + 64;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/12.png';
+evolcreate.alt = 'turq';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'turq" + turqcount + "'");
+ 
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function mergeLowest() {
+
+if(redcount>=2) {
+redMerge();
+} else {
+
+if(orangecount>=2) {
+orangeMerge();
+} else {
+
+if(yellowcount>=2) {
+yellowMerge();
+} else {
+if(greencount>=2) {
+greenMerge();
+} else {
+
+if(bluecount>=2) {
+blueMerge();
+} else {
+
+if(purplecount>=2) {
+purpleMerge();
+} else {
+
+if(magentacount>=2) {
+magentaMerge();
+} else {
+
+if(pinkcount>=2) {
+pinkMerge();
+} else {
+
+if(lgraycount>=2) {
+lgrayMerge();
+} else {
+
+if(graycount>=2) {
+grayMerge();
+} else {
+
+if(navycount>=2) {
+navyMerge();
+} else {
+
+alert('Nothing to merge!');
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+function saveGame() {
+var filename = "data/savedata/save.dat";
+fso = new ActiveXObject("Scripting.FileSystemObject");
+ForWriting = 2;
+file = fso.OpenTextFile(filename, ForWriting, true);
+
+file.writeline("var savescore = "+score+";");
+file.writeline("var savemoney = "+money+";");
+file.writeline("var sfullcount = "+fullcount+";");
+file.writeline("var sredcount = "+redcount+";");
+file.writeline("var sorangecount = "+orangecount+";");
+file.writeline("var syellowcount = "+yellowcount+";");
+file.writeline("var sgreencount = "+greencount+";");
+file.writeline("var sbluecount = "+bluecount+";");
+file.writeline("var spurplecount = "+purplecount+";");
+file.writeline("var smagentacount = "+magentacount+";");
+file.writeline("var spinkcount = "+pinkcount+";");
+file.writeline("var save = 1;");
+
+file.Close();
+
+}
+
+function loadGame() {
+if(fullcount==0) {
+score=savescore;
+money=savemoney;
+fullcount=sfullcount;
+redcount=sredcount;
+orangecount=sorangecount;
+yellowcount=syellowcount;
+greencount=sgreencount;
+bluecount=sbluecount;
+purplecount=sbluecount;
+magentacount=smagentacount;
+pinkcount=spinkcount;
+
+document.getElementById("score").innerHTML = score;
+document.getElementById("money").innerHTML = money;
+
+
+
+var redload=redcount;
+var orangeload=orangecount;
+var yellowload=yellowcount;
+var greenload=greencount;
+var blueload=bluecount;
+var purpleload=purplecount;
+var magentaload=magentacount;
+var pinkload=pinkcount;
+if(redcount!=0) {
+function repeat(func, times) {
+    func();
+    --times && repeat(func, times);
+}
+
+repeat(function () { 
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/1.png';
+evolcreate.alt = 'red';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'red" + redload + "'");
+ 
+document.body.appendChild(evolcreate);
+redload = +redload - 1;
+
+}, redcount);
+}
+
+// BEGIN ORANGE RESTORATION
+if(orangecount!=0) {
+function repeat(func, times) {
+    func();
+    --times && repeat(func, times);
+}
+
+repeat(function () { 
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/2.png';
+evolcreate.alt = 'orange';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'orange" + orangeload + "'");
+ 
+document.body.appendChild(evolcreate);
+orangeload = +orangeload - 1;
+
+}, orangecount);
+}
+// BEGIN YELLOW RESTORATION
+if(yellowcount!=0) {
+function repeat(func, times) {
+    func();
+    --times && repeat(func, times);
+}
+
+repeat(function () { 
+//alert(redcount);
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/3.png';
+evolcreate.alt = 'yellow';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'yellow" + yellowload + "'");
+ 
+document.body.appendChild(evolcreate);
+yellowload = +yellowload - 1;
+
+}, yellowcount);
+}
+// BEGIN GREEN RESTORATION
+if(greencount!=0){
+function repeat(func, times) {
+    func();
+    --times && repeat(func, times);
+}
+
+repeat(function () { 
+//alert(redcount);
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/4.png';
+evolcreate.alt = 'green';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'green" + greenload + "'");
+ 
+document.body.appendChild(evolcreate);
+greenload = +greenload - 1;
+
+}, greencount);
+}
+// BEGIN BLUE RESTORATION
+if(bluecount!=0) {
+function repeat(func, times) {
+    func();
+    --times && repeat(func, times);
+}
+
+repeat(function () { 
+//alert(redcount);
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/5.png';
+evolcreate.alt = 'blue';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'blue" + blueload + "'");
+ 
+document.body.appendChild(evolcreate);
+blueload = +blueload - 1;
+
+}, bluecount);
+}
+
+// BEGIN PURPLE RESTORATION
+if(purplecount!=0) {
+function repeat(func, times) {
+    func();
+    --times && repeat(func, times);
+}
+
+repeat(function () { 
+//alert(redcount);
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/6.png';
+evolcreate.alt = 'purple';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'purple" + purpleload + "'");
+ 
+document.body.appendChild(evolcreate);
+purpleload = +purpleload - 1;
+
+}, purplecount);
+}
+
+// BEGIN MAGENTA RESTORATION
+if(magentacount!=0) {
+function repeat(func, times) {
+    func();
+    --times && repeat(func, times);
+}
+
+repeat(function () { 
+//alert(redcount);
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/7.png';
+evolcreate.alt = 'magenta';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'magenta" + magentaload + "'");
+ 
+document.body.appendChild(evolcreate);
+magentaload = +magentaload - 1;
+
+}, magentacount);
+}
+
+// BEGIN PINK RESTORATION
+if(pinkcount!=0) {
+function repeat(func, times) {
+    func();
+    --times && repeat(func, times);
+}
+
+repeat(function () { 
+//alert(redcount);
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/8.png';
+evolcreate.alt = 'pink';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'pink" + pinkload + "'");
+ 
+document.body.appendChild(evolcreate);
+pinkload = +pinkload - 1;
+
+}, pinkcount);
+}
+
+} else {
+alert('Loading the game can only occur if the board is empty!');
+}
+
+}
+	</script>
+
+<script language="VBScript">
+
+Sub Resizing
+
+window.resizeTo 600,600
+
+End Sub
+
+</script>
+
+</head>
+
+<body style="background-image:url('data/bgimg.png')" onload=Resizing() >
+	<img src="data/logo.png" alt="Clicker Evolution"/>
+	<p style="display:inline" >Score: </p>
+	<p style="display:inline" id="score">0</p>
+	<p style="display:inline;visibility:hidden">asdfghjklasdfghjklasdghjklasdfgasdghjkl</p>
+	<p style="display:inline" >     Money: </p>
+	<p style="display:inline" id="money">0</p>
+<br>
+	<button onclick="evolveCreator()">Spawn Red</button>
+	<button onclick="mergeLowest()">Merge Lowest</button>
+	<button onclick="saveGame()">Save Game</button>
+	<button onclick="loadGame()">Load Game</button>
+<br>
+</body>
+</html>
+</html>
