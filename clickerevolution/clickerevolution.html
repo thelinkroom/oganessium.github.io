@@ -36,8 +36,8 @@ var saveload = "";
 var fullcount = 0;
 
 function evolveCreator() { //Creates Reds
-fullcount=redcount+orangecount+yellowcount+greencount+bluecount+purplecount+magentacount; //tallies full count
-if(fullcount!=324) { //checks if board is full
+fullcount=redcount+orangecount+yellowcount+greencount+bluecount+purplecount+magentacount+pinkcount+lgraycount+graycount+navycount+turqcount+skincount+mancount; //tallies full count
+if(fullcount!=40) { //checks if board is full
 redcount= +redcount + 1; //adds 1 red
 score = +score + 1; //adds 1 score
 money = +money + ((score+1)*.5); //adds money
@@ -725,10 +725,16 @@ body {
 -moz-user-select: none;
 -ms-user-select: none;
 user-select: none;
+margin: 0;
+height: 100%;
+overflow: hidden;
 }
 
 html {
 touch-action: manipulation;
+margin: 0;
+height: 100%;
+overflow: hidden;
 }
 </style>
 
