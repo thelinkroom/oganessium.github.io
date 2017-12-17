@@ -25,7 +25,7 @@ var lgraycount = 0;
 var graycount = 0;
 var navycount = 0;
 var turqcount = 0;
-var skincount = 0;
+var tancount = 0;
 var mancount = 0;
 var remove1 = "";
 var remove2 = "";
@@ -400,7 +400,69 @@ alert('Not enough money!');
 }
 }
 }
+	
+function turqMerge() {
+if(turqcount>=2) {
+if(money>=4194304) {
+money = +money - 4194304;
+document.getElementById("money").innerHTML = money;
+var turqcountminus = +turqcount - 1;
+eval("remove1=document.getElementById('turq" + turqcount + "')");
+eval("remove2=document.getElementById('turq" + turqcountminus + "')");
+turqcount = +turqcount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
 
+tancount = +tancount + 1;
+score = +score + 64;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/13.png';
+evolcreate.alt = 'tan';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'tan" + tancount + "'");
+
+
+
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+
+function tanMerge() {
+if(tancount>=2) {
+if(money>=4194304) {
+money = +money - 4194304;
+document.getElementById("money").innerHTML = money;
+var tancountminus = +tancount - 1;
+eval("remove1=document.getElementById('tan" + tancount + "')");
+eval("remove2=document.getElementById('tan" + tancountminus + "')");
+tancount = +tancount - 2;
+document.body.removeChild(remove1);
+document.body.removeChild(remove2);
+
+mancount = +mancount + 1;
+score = +score + 64;
+document.getElementById("score").innerHTML = score;
+
+evolcreate=document.createElement("img");
+evolcreate.src = 'data/14.png';
+evolcreate.alt = 'man';
+evolcreate.style.margin = '1px';
+eval("evolcreate.id = 'man" + mancount + "'");
+
+
+
+document.body.appendChild(evolcreate);
+} else {
+alert('Not enough money!');
+}
+}
+}
+	
 function mergeLowest() {
 
 if(redcount>=2) {
@@ -446,10 +508,21 @@ if(navycount>=2) {
 navyMerge();
 } else {
 
+if(turqcount>=2) {
+turqMerge();
+} else {
+
+if(tancount>=2) {
+tanMerge();
+} else {
+
 alert('Nothing to merge!');
 
 }
 
+}
+
+}
 }
 
 }
