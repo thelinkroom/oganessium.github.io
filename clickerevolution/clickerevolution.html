@@ -34,10 +34,16 @@ var money = 0;
 var username = "";
 var saveload = "";
 var fullcount = 0;
-
+var agentcount = 0;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+agentcount = 48;
+} else {
+agentcount = 324;
+}
+	
 function evolveCreator() { //Creates Reds
 fullcount=redcount+orangecount+yellowcount+greencount+bluecount+purplecount+magentacount+pinkcount+lgraycount+graycount+navycount+turqcount+tancount+mancount; //tallies full count
-if(fullcount!=48) { //checks if board is full
+if(fullcount!=agentcount) { //checks if board is full
 redcount= +redcount + 1; //adds 1 red
 score = +score + 1; //adds 1 score
 money = +money + ((score+1)*.5); //adds money
