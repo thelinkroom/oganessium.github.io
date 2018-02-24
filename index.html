@@ -14,12 +14,21 @@
            display:inline;
     }
     </style>
-  
+  <script type="text/javascript">
+    function theAssMaster() {
+    var myass = document.getElementById("img1");
+    if(myass.src = "https://i.imgur.com/q0jrShz.png") {
+     myass.src = "https://i.imgur.com/wO5NX3U.png"; 
+    } else {
+      myass.src = "https://i.imgur.com/q0jrShz.png"; 
+    }
+    }
+    </script>
   </head>
 <body style="background-color:black;">
 <center>
 <h1>cydia repository</h1><br><br><br>
- <img src="https://i.imgur.com/ryNKRtW.jpg"/><br>
+ <img onclick="theAssMaster()" id="img1" src="https://i.imgur.com/q0jrShz.png"/><br>
   <a href="/wii">Wii</a>&nbsp;<p> | </p>&nbsp;<a style="font-size:24px;" href="/more">More</a>&nbsp;<p> | </p>&nbsp;<a href="/ios">iOS</a>
 </center>
 </body>
