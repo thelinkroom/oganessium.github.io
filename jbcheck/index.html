@@ -1,0 +1,322 @@
+<html>
+<head>
+<script>
+var pcheck = document.getElementById('phones');
+var icheck = document.getElementById('ios');
+var bit=0;
+var ioss="null";
+
+function checkSel() {
+icheck = document.getElementById('ios');
+pcheck = document.getElementById('phones');
+console.log(icheck.selectedIndex);
+if(pcheck.selectedIndex <=4) {
+console.log('amcc');
+amcc="yes";
+} else {
+console.log('no amcc');
+amcc="no";
+}
+
+if(pcheck.selectedIndex <=10) {
+console.log('64bit');
+bit=64;
+
+} else {
+console.log('32bit');
+bit=32;
+
+}
+
+if(bit==64) { // if 64-bit
+
+if(amcc=="yes") { // if AMCC extra protection or not
+
+if(icheck.selectedIndex <=5) {
+
+console.log('No Jailbreak!');
+
+}
+
+if(icheck.selectedIndex >=6) { //open top range
+if(icheck.selectedIndex <=12) { //open bottom range
+
+console.log('electra!');
+window.location = "https://coolstar.org/electra/";
+
+} //closes bottom range
+} //closes top range
+
+if(icheck.selectedIndex >=13) { //open top range
+if(icheck.selectedIndex <=25) { //open bottom range
+
+console.log('meridian!');
+window.location = "https://meridian.sparkes.zone/";
+
+} //closes bottom range
+} //closes top range
+
+if(icheck.selectedIndex >=26) { //opens range
+
+console.log('No Jailbreak!');
+} //closes range
+
+
+
+} else { // no amcc
+
+
+
+if(icheck.selectedIndex <=5) {
+
+console.log('No Jailbreak!');
+
+}
+
+if(icheck.selectedIndex >=6) { //open top range
+if(icheck.selectedIndex <=12) { //open bottom range
+
+console.log('electra!');
+window.location = "https://coolstar.org/electra/";
+
+} //closes bottom range
+} //closes top range
+
+if(icheck.selectedIndex >=13) { //open top range
+if(icheck.selectedIndex <=25) { //open bottom range
+
+console.log('meridian!');
+window.location = "https://doubleh3lix.tihmstar.net/";
+
+} //closes bottom range
+} //closes top range
+
+if(icheck.selectedIndex >=26) { //opens range
+if(icheck.selectedIndex <=27) { //opens range
+
+console.log('No Jailbreak!');
+} //closes range
+} //closes range
+
+if(icheck.selectedIndex >=28) { //opens range
+if(icheck.selectedIndex <=33) { //opens range
+
+console.log('PANGU933');
+window.location = "http://en.pangu.io/help.html";
+} //closes range
+} //closes range
+
+if(icheck.selectedIndex >=34) { //opens range
+if(icheck.selectedIndex <=37) { //opens range
+console.log('pangu9');
+window.location = "http://en.9.pangu.io/";
+} //closes range
+} //closes range
+
+if(icheck.selectedIndex ==38) { //opens range
+
+console.log('No Jailbreak!');
+} //closes range
+
+if(icheck.selectedIndex >=39) { //opens range
+if(icheck.selectedIndex <=48) { //opens range
+console.log('taiG');
+window.location = "http://taig.com/";
+} //closes range
+} //closes range
+
+
+if(icheck.selectedIndex >=49) { //opens range
+if(icheck.selectedIndex <=51) { //opens range
+console.log('panGu7');
+window.location = "http://en.7.pangu.io/";
+} //closes range
+} //closes range
+
+if(icheck.selectedIndex >=52) { //opens range
+if(icheck.selectedIndex <=58) { //opens range
+console.log('evasi0n7');
+window.location = "evasi0n.html";
+} //closes range
+} //closes range
+
+if(icheck.selectedIndex >=59) { //opens range
+
+console.log('No Jailbreak!');
+} //closes range
+
+}//close no amcc
+} else { // 32-bit
+
+if(icheck.selectedIndex >=13) { //opens range
+if(icheck.selectedIndex <=25) { //opens range
+console.log('evasi0n7');
+window.location = "https://h3lix.tihmstar.net/";
+} //closes range
+} //closes range
+
+if(icheck.selectedIndex ==26) { //opens range
+
+console.log('phoenix!');
+window.location = "https://phoenixpwn.com/";
+} //closes range
+
+if(icheck.selectedIndex >=27) { //opens range
+if(icheck.selectedIndex <=34) { //opens range
+
+console.log('home depot 9');
+window.location = "http://wall.supplies/";
+} //closes range
+} //closes range
+
+if(icheck.selectedIndex >=35) { //opens range
+if(icheck.selectedIndex <=37) { //opens range
+console.log('pangu9');
+window.location = "http://en.9.pangu.io/";
+} //closes range
+} //closes range
+
+if(icheck.selectedIndex ==38) { //opens range
+console.log('etasonjb');
+window.location = "https://etasonjb.tihmstar.net/";
+} //closes range
+
+if(icheck.selectedIndex >=39) { //opens range
+if(icheck.selectedIndex <=48) { //opens range
+console.log('taiG');
+window.location = "http://taig.com/";
+} //closes range
+} //closes range
+
+
+if(icheck.selectedIndex >=49) { //opens range
+if(icheck.selectedIndex <=51) { //opens range
+console.log('panGu7');
+window.location = "http://en.7.pangu.io/";
+} //closes range
+} //closes range
+
+if(icheck.selectedIndex >=52) { //opens range
+if(icheck.selectedIndex <=58) { //opens range
+console.log('evasi0n7');
+window.location = "evasi0n.html";
+} //closes range
+} //closes range
+
+
+
+} //close bitcheck
+
+console.log(ioss);
+
+
+} //close main function
+</script>
+<style>
+h1 {
+font-family:'Arial';
+}
+h4 {
+font-family:'Arial';
+}
+</style>
+</head>
+<body>
+<h1>jailbreak locator beta 1</h1>
+<h4>warning: this build has little thought in it and i just wanted to publish before sleeping. g'night!</h4>
+<h4>Check the console for more information</h4>
+<select id="phones">
+    <option>iPhone X</option>
+    <option>iPhone 8+</option>
+    <option>iPhone 8</option>
+	<option>iPhone 7+</option>
+	<option>iPhone 7</option>
+	<option>iPhone SE</option>
+	<option>iPhone 6s+</option>
+	<option>iPhone 6s</option>
+	<option>iPhone 6+</option>
+	<option>iPhone 6</option>
+	<option>iPhone 5s</option>
+	<option>iPhone 5c</option>
+	<option>iPhone 5</option>
+	<option>iPhone 4s</option>
+	<option>iPhone 4</option>
+	<option>iPhone 3gs</option>
+	<option>iPhone 3g</option>
+	<option>iPhone 2g</option>
+</select>
+
+<select id="ios">
+    <option>11.3</option>
+    <option>11.2.6</option>
+    <option>11.2.5</option>
+	<option>11.2.2</option>
+	<option>11.2.1</option>
+	<option>11.2</option>
+	<option>11.1.2</option>
+	<option>11.1.1</option>
+	<option>11.1</option>
+	<option>11.0.3</option>
+	<option>11.0.2</option>
+	<option>11.0.1</option>
+	<option>11.0</option>
+	<option>10.3.3</option>
+	<option>10.3.2</option>
+	<option>10.3.1</option>
+	<option>10.3</option>
+	<option>10.2.2</option>
+	<option>10.2.1</option>
+	<option>10.2</option>
+	<option>10.1.1</option>
+	<option>10.1</option>
+	<option>10.0.3</option>
+	<option>10.0.2</option>
+	<option>10.0.1</option>
+	<option>10.0</option>
+	<option>9.3.5</option>
+	<option>9.3.4</option>
+	<option>9.3.3</option>
+	<option>9.3.2</option>
+	<option>9.3.1</option>
+	<option>9.3</option>
+	<option>9.2.1</option>
+	<option>9.2</option>
+	<option>9.1</option>
+	<option>9.0.2</option>
+	<option>9.0.1</option>
+	<option>9.0</option>
+	<option>8.4.1</option>
+	<option>8.4</option>
+	<option>8.3</option>
+	<option>8.2</option>
+	<option>8.1.3</option>
+	<option>8.1.2</option>
+	<option>8.1.1</option>
+	<option>8.1</option>
+	<option>8.0.2</option>
+	<option>8.0.1</option>
+	<option>8.0</option>
+	<option>7.1.2</option>
+	<option>7.1.1</option>
+	<option>7.1</option>
+	<option>7.0.6</option>
+	<option>7.0.5</option>
+	<option>7.0.4</option>
+	<option>7.0.3</option>
+	<option>7.0.2</option>
+	<option>7.0.1</option>
+	<option>7.0</option>
+	<option>6.1.6</option>
+	<option>6.1.5</option>
+	<option>6.1.4</option>
+	<option>6.1.3</option>
+	<option>6.1.2</option>
+	<option>6.1.1</option>
+	<option>6.1</option>
+	<option>6.0.1</option>
+	<option>6.0</option>
+	
+</select>
+<button onclick="checkSel()">find it!</button>
+</body>
+</html>
