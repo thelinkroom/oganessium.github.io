@@ -2,6 +2,8 @@
 <head>
 <script>
 var pcheck = document.getElementById('phones');
+var ipadcheck = document.getElementById('ipads');
+var ipodcheck = document.getElementById('ipods');
 var icheck = document.getElementById('ios');
 var bit=0;
 var ioss="null";
@@ -74,7 +76,7 @@ function checkSel() {
 icheck = document.getElementById('ios');
 pcheck = document.getElementById('phones');
 ipadcheck = document.getElementById('ipads');
-console.log(icheck.selectedIndex);
+ipodcheck = document.getElementById('ipods');
 
 if(device=="ipad") {
 
@@ -125,7 +127,7 @@ if(device=="ipod") { // ipod amcc/bit check
 console.log('no amcc');
 amcc="no";
 
-if(pcheck.selectedIndex==0) {
+if(ipodcheck.selectedIndex == 1) {
 console.log('64bit');
 bit=64;
 
@@ -393,7 +395,7 @@ font-family:'Arial';
 </style>
 </head>
 <body onload="hideNon()">
-<h1>jailbreak locator beta 3</h1>
+<h1>jailbreak locator beta 4</h1>
 <h4>now locating ipad and ipod breaks - tvos eta son</h4>
 <h4>Check the console for more information</h4>
 <button onclick="setIphone()">iphone</button>
@@ -520,6 +522,8 @@ font-family:'Arial';
 </select>
 <button onclick="checkSel()">find it!</button>
 <br><br>
+<h3>beta4</h3>
+<p>- fixed bug where the wrong destination would be served</p>
 <h3>beta3r1</h3>
 <p>- changed header to beta 3</p>
 <h3>beta3</h3>
