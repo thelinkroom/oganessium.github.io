@@ -5,11 +5,101 @@ var pcheck = document.getElementById('phones');
 var icheck = document.getElementById('ios');
 var bit=0;
 var ioss="null";
+var device="iphone";
+
+function setIpad() { //sets ipad as dropdown
+
+device="ipad";
+hideNon();
+
+} //end setIpad
+
+function setIphone() { //sets phone as dropdown
+
+device="iphone";
+hideNon();
+
+} //end phone
+
+function setIpod() { //sets pod as dropdown
+
+device="ipod";
+hideNon();
+
+} //end pod
+
+function hideNon() { // hides not-in-use devices
+if(device=="iphone") {
+
+document.getElementById("ipads").style.visibility = 'hidden';
+document.getElementById("ipods").style.visibility = 'hidden';
+document.getElementById("ipads").style.display = 'none';
+document.getElementById("ipods").style.display = 'none';
+document.getElementById("ipads").style.display = 'none';
+document.getElementById("ipods").style.display = 'none';
+document.getElementById("phones").style.display = 'inline';
+document.getElementById("phones").style.visibility = 'visible';
+
+
+
+}
+
+if(device=="ipad") {
+
+document.getElementById("phones").style.visibility = 'hidden';
+document.getElementById("ipods").style.visibility = 'hidden';
+document.getElementById("phones").style.display = 'none';
+document.getElementById("ipods").style.display = 'none';
+document.getElementById("ipads").style.display = 'inline';
+document.getElementById("ipads").style.visibility = 'visible';
+
+
+}
+
+if(device=="ipod") {
+
+document.getElementById("phones").style.visibility = 'hidden';
+document.getElementById("ipads").style.visibility = 'hidden';
+document.getElementById("phones").style.display = 'none';
+document.getElementById("ipads").style.display = 'none';
+document.getElementById("ipods").style.display = 'inline';
+document.getElementById("ipods").style.visibility = 'visible';
+
+
+}
+
+}
 
 function checkSel() {
 icheck = document.getElementById('ios');
 pcheck = document.getElementById('phones');
+ipadcheck = document.getElementById('ipads');
 console.log(icheck.selectedIndex);
+
+if(device=="ipad") {
+
+if(ipadcheck.selectedIndex <=1) {
+console.log('amcc');
+amcc="yes";
+} else {
+console.log('no amcc');
+amcc="no";
+}
+
+if(ipadcheck.selectedIndex <=9) {
+console.log('64bit');
+bit=64;
+
+} else {
+console.log('32bit');
+bit=32;
+
+}
+
+}
+
+if(device=="iphone") { // iphone amcc/bit check
+
 if(pcheck.selectedIndex <=4) {
 console.log('amcc');
 amcc="yes";
@@ -27,10 +117,32 @@ console.log('32bit');
 bit=32;
 
 }
+} //end iphone amcc/bit check
+
+if(device=="ipod") { // ipod amcc/bit check
+
+
+console.log('no amcc');
+amcc="no";
+
+if(pcheck.selectedIndex==0) {
+console.log('64bit');
+bit=64;
+
+} else {
+console.log('32bit');
+bit=32;
+
+}
+} //end ipod amcc/bit check
+
+if(device=="iphone" || device=="ipad" || device=="ipod") { //if iphone
 
 if(bit==64) { // if 64-bit
 
 if(amcc=="yes") { // if AMCC extra protection or not
+
+
 
 if(icheck.selectedIndex <=5) {
 
@@ -64,8 +176,34 @@ document.write('no jailbreak found');
 
 
 
-} else { // no amcc
 
+
+if(icheck.selectedIndex >=6) { //open top range
+if(icheck.selectedIndex <=12) { //open bottom range
+
+console.log('electra!');
+window.location = "https://coolstar.org/electra/";
+
+} //closes bottom range
+} //closes top range
+
+if(icheck.selectedIndex >=13) { //open top range
+if(icheck.selectedIndex <=25) { //open bottom range
+
+console.log('meridian!');
+window.location = "https://meridian.sparkes.zone/";
+
+} //closes bottom range
+} //closes top range
+
+if(icheck.selectedIndex >=26) { //opens range
+
+console.log('No Jailbreak!');
+document.write('no jailbreak found');
+} //closes range
+
+
+} else { // no amcc
 
 
 if(icheck.selectedIndex <=5) {
@@ -147,8 +285,10 @@ console.log('No Jailbreak!');
 document.write('no jailbreak found');
 } //closes range
 
+
 }//close no amcc
 } else { // 32-bit
+
 
 if(icheck.selectedIndex >=13) { //opens range
 if(icheck.selectedIndex <=25) { //opens range
@@ -220,7 +360,14 @@ window.location = "evasi0n6.html";
 } //closes range
 } //closes range
 
+
 } //close bitcheck
+
+
+} //close iphone
+
+
+
 
 console.log(ioss);
 
@@ -245,10 +392,13 @@ font-family:'Arial';
 }
 </style>
 </head>
-<body>
+<body onload="hideNon()">
 <h1>jailbreak locator beta 2</h1>
-<h4>warning: this build has little thought in it and i just wanted to publish before sleeping. g'night!</h4>
+<h4>now locating ipad and ipod breaks - tvos eta son</h4>
 <h4>Check the console for more information</h4>
+<button onclick="setIphone()">iphone</button>
+<button onclick="setIpad()">ipad</button>
+<button onclick="setIpod()">ipod</button><br>
 <select id="phones">
     <option>iPhone X</option>
     <option>iPhone 8+</option>
@@ -268,6 +418,33 @@ font-family:'Arial';
 	<option>iPhone 3gs</option>
 	<option>iPhone 3g</option>
 	<option>iPhone 2g</option>
+</select>
+
+<select id="ipads">
+    <option>iPad Pro 10.5"</option>
+    <option>iPad Pro 2 12.9"</option>
+    <option>iPad 5</option>
+	<option>iPad Pro 12.9"</option>
+	<option>iPad Pro 9.7"</option>
+	<option>iPad Air 2</option>
+	<option>iPad Mini 4</option>
+	<option>iPad Mini 3</option>
+	<option>iPad Mini 2</option>
+	<option>iPad Air</option>
+	<option>iPad 4</option>
+	<option>iPad 3</option>
+	<option>iPad Mini</option>
+	<option>iPad 2</option>
+	<option>iPad</option>
+</select>
+
+<select id="ipods">
+    <option>iPod 6</option>
+    <option>iPod 5</option>
+    <option>iPod 4</option>
+	<option>iPod 3</option>
+	<option>iPod 2G</option>
+	<option>iPod 1G</option>
 </select>
 
 <select id="ios">
@@ -343,10 +520,17 @@ font-family:'Arial';
 </select>
 <button onclick="checkSel()">find it!</button>
 <br><br>
+<h3>beta3</h3>
+<p>- added ipad support</p>
+<p>- added ipod support</p>
+<p>- optimized ipad/ipod support</p>
+<p>- fixed "double no jailbreak" bug</p>
 <h3>beta2</h3>
 <p>- fixed evasi0n links</p>
 <p>- added ios 6 support</p>
 <p>- added changelog</p>
+<p>- added "no jailbreak" message</p>
+
 <h3>beta1</h3>
 <p>- initial beta</p>
 
